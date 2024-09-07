@@ -1,0 +1,23 @@
+<div class="series">
+  <ul class="seriesUl">
+    @for (series of renderedSeries(); track series.id) {
+    <li class="seriesLi" [routerLink]="['/series/', series.id]">
+      <div class="imageAndRateDiv">
+        <img
+          [src]="
+            'https://image.tmdb.org/t/p/original/' + this.series.poster_path
+          "
+          [alt]="series.original_name"
+          class="seriesPoster"
+        />
+        <div class="rateOverImage">
+          {{ series.vote_average | number : "1.0-1" }}
+        </div>
+      </div>
+      <h3>{{ series.original_name }}</h3>
+    </li>
+    }@empty {
+    <h2 class="loading">Loading...</h2>
+    }
+  </ul>
+</div>

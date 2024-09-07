@@ -1,0 +1,116 @@
+/* animations */
+
+@keyframes increaseInputWidth {
+  from {
+    max-width: 8rem;
+  }
+  to {
+    max-width: 14rem;
+  }
+}
+
+/* ------------ */
+/* routerlink */
+.router-link-active {
+  color: #f9ab00;
+}
+/* ------------ */
+
+nav {
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.382);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.searchDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search {
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  max-width: 8rem;
+  padding: 6px;
+  color: white;
+}
+
+#search::placeholder {
+  color: white;
+}
+
+#search:focus {
+  outline: none;
+  animation: increaseInputWidth 0.5s;
+  max-width: 14rem;
+}
+
+ul {
+  display: flex;
+  gap: 40px;
+}
+
+li {
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+li:hover {
+  color: #f9ab00;
+}
+
+.matIcon {
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .labNav {
+    display: none;
+  }
+
+  .verticalChooseList {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.382);
+    backdrop-filter: blur(10px);
+    right: 0;
+    top: 4.2rem;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 0 0 0 20px;
+    gap: 10px;
+    z-index: 1000;
+  }
+  .verticalChooseList li {
+    color: white;
+    padding: 10px 40px;
+    transition: 0.3s;
+  }
+
+  .verticalChooseList li:hover {
+    cursor: pointer;
+    color: #f9ab00;
+  }
+}
+
+.submitSearch {
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: 800px) {
+  .phoneNav {
+    display: none;
+  }
+}

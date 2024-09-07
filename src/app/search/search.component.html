@@ -1,0 +1,32 @@
+<app-navbar />
+
+<div class="searchContainer">
+  <div>
+    <h1 class="h1Search">
+      Search <span>{{ searchResultShows().toUpperCase() }}</span>
+    </h1>
+  </div>
+
+  <div class="searchResultsDiv">
+    <ul class="searchResultsUl">
+      @for (result of searchShowsResults(); track result.id) {
+      <li
+        class="resultImageTitleLi"
+        (click)="searchClicked(result.media_type, result.id)"
+      >
+        <img
+          [src]="
+            'https://image.tmdb.org/t/p/original/' + result.poster_path ||
+            result.backdrop_path
+          "
+          [alt]="result.name || result.original_title"
+          class="searchPoster"
+        />
+        <h3 class="searchOriginalTitle">
+          {{ result.original_title || result.name }}
+        </h3>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

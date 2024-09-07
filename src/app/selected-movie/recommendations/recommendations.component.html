@@ -1,0 +1,16 @@
+<div class="recommendationsContainer">
+  <h2 class="recommendationsH2">Recommendations</h2>
+  <div class="recommendationsDiv">
+    @for (recommended of recommendedMovies(); track recommended.id) {
+    <div class="recommendedMovie" (click)="reloadPage(recommended.id)">
+      <img
+        [src]="'https://image.tmdb.org/t/p/original/' + recommended.poster_path"
+        [alt]="recommended.title"
+        class="recommendedPoster"
+      />
+      <h3 class="recommendedTitle">{{ recommended.title }}</h3>
+    </div>
+
+    }
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<app-navbar />
+
+<div class="moviesContainer">
+  <div class="movieContainer">
+    <h1>DISCOVER WHAT IS <span class="h1Span">POPULAR</span></h1>
+    <app-movies-list [renderedMovies]="popularMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>ACTION</h2>
+
+    <app-movies-list [renderedMovies]="actionMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>ADVENTURE</h2>
+    <app-movies-list [renderedMovies]="adventureMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>ANIMATION</h2>
+    <app-movies-list [renderedMovies]="animationMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>COMEDY</h2>
+    <app-movies-list [renderedMovies]="comedyMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>DRAMA</h2>
+    <app-movies-list [renderedMovies]="dramaMovies()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>HORROR</h2>
+    <app-movies-list [renderedMovies]="horrorMovies()" />
+  </div>
+  <div class="movieContainer">
+    <h2>ROMANCE</h2>
+    <app-movies-list [renderedMovies]="romanceMovies()" />
+  </div>
+</div>

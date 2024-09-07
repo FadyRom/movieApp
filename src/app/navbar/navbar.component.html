@@ -1,0 +1,63 @@
+<nav class="labNav">
+  <div class="searchDiv">
+    <input
+      type="text"
+      name="search"
+      id="search"
+      placeholder="Search"
+      [(ngModel)]="searchFieldValue"
+      (keyup.enter)="bind()"
+    />
+    <button type="submit" class="submitSearch" (click)="bind()">
+      <mat-icon class="matIcon">search</mat-icon>
+    </button>
+  </div>
+
+  <div class="chooseList">
+    <ul>
+      <li>
+        <a [routerLink]="['/movies']" routerLinkActive="router-link-active">
+          Movies
+        </a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/series']" routerLinkActive="router-link-active">
+          Series
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="phoneNav">
+  <nav class="phoneNav">
+    <div class="searchDiv">
+      <mat-icon class="matIcon">search</mat-icon>
+      <input type="text" name="search" id="search" placeholder="Search" />
+    </div>
+
+    <div>
+      <mat-icon class="burgerButton matIcon" (click)="showVerticalList()"
+        >line_weight</mat-icon
+      >
+    </div>
+  </nav>
+  @if(showVertical()){
+  <div>
+    <ul class="verticalChooseList">
+      <li>
+        <a [routerLink]="['/movies']" routerLinkActive="router-link-active">
+          Movies
+        </a>
+      </li>
+
+      <li>
+        <a [routerLink]="['/series']" routerLinkActive="router-link-active">
+          Series
+        </a>
+      </li>
+    </ul>
+  </div>
+  }
+</div>

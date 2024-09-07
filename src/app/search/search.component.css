@@ -1,0 +1,45 @@
+/* .searchContainer {
+  padding-left: 1rem;
+} */
+
+.h1Search {
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.h1Search span {
+  color: #f9ab00;
+}
+
+.searchResultsUl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 10rem);
+  gap: 1rem;
+  place-content: center;
+}
+
+.resultImageTitleLi {
+  cursor: pointer;
+}
+
+.searchPoster {
+  width: 10rem;
+  border-radius: 20px;
+}
+
+.searchOriginalTitle {
+  text-align: center;
+  color: white;
+  font-size: 2cqb;
+}
+
+@media (max-width: 750px) {
+  .searchResultsUl {
+    grid-template-columns: repeat(auto-fit, 6rem);
+  }
+
+  .searchPoster {
+    width: 6rem;
+  }
+}

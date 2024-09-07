@@ -1,0 +1,46 @@
+<nav>
+  <h1>SC<span class="h1Span">OP</span>E</h1>
+  <div class="searchDiv">
+    <mat-icon class="matIcon">search</mat-icon>
+    <input type="text" name="search" id="search" placeholder="Search" />
+  </div>
+
+  <hr />
+
+  <div class="chooseList">
+    <ul>
+      <li>
+        <a [routerLink]="['/movies']" routerLinkActive="router-link-active"
+          >Movies</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/series']" routerLinkActive="router-link-active"
+          >Series</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div>
+    <mat-icon class="burgerButton matIcon" (click)="showVerticalList()"
+      >line_weight</mat-icon
+    >
+  </div>
+  @if (showVertical()) {
+
+  <div class="verticalChooseList">
+    <ul>
+      <li>
+        <a [routerLink]="['/movies']" routerLinkActive="router-link-active">
+          Movies
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/series']" routerLinkActive="router-link-active">
+          Series
+        </a>
+      </li>
+    </ul>
+  </div>
+  }
+</nav>

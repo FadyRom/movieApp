@@ -1,0 +1,26 @@
+* {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.loading {
+  color: #f9ab00;
+}
+
+.h1Span {
+  color: #f9ab00;
+}
+
+@media (max-width: 700px) {
+  .movieContainer {
+    padding: 10px;
+  }
+}
+@media (min-width: 700px) {
+  .movieContainer {
+    padding: 2rem;
+  }
+}

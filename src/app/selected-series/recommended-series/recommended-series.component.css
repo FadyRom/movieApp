@@ -1,0 +1,45 @@
+/* animations */
+
+/* @keyframes hoverImage {
+  0% {
+    max-width: 8rem;
+  }
+  100% {
+    max-width: 9rem;
+  }
+} */
+
+/* -------------------- */
+
+.recommendationsH2 {
+  text-align: center;
+}
+
+.recommendationsDiv {
+  min-width: 40vw;
+  width: 50vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  gap: 1rem;
+  place-content: center;
+}
+
+.recommendedPoster {
+  width: 8rem;
+  border-radius: 20px;
+}
+
+.recommendedPoster:hover {
+  cursor: pointer;
+}
+
+.recommendedTitle {
+  font-size: 1.5cqb;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .recommendationsDiv {
+    width: 90vw;
+  }
+}

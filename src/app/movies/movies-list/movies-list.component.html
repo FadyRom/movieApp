@@ -1,0 +1,23 @@
+<div class="movies">
+  <ul class="movieUl">
+    @for (movie of renderedMovies(); track movie.id) {
+    <li class="movieLi" [routerLink]="['/movies/', movie.id]">
+      <div class="imageAndRateDiv">
+        <img
+          [src]="
+            'https://image.tmdb.org/t/p/original/' + this.movie.poster_path
+          "
+          [alt]="movie.title"
+          class="moviePoster"
+        />
+        <div class="rateOverImage">
+          {{ movie.vote_average | number : "1.0-1" }}
+        </div>
+      </div>
+      <h3>{{ movie.title }}</h3>
+    </li>
+    }@empty {
+    <h2 class="loading">Loading...</h2>
+    }
+  </ul>
+</div>

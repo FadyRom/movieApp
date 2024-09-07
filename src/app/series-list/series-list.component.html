@@ -1,0 +1,38 @@
+<app-navbar />
+
+<div class="moviesContainer">
+  <div class="movieContainer">
+    <h1>DISCOVER WHAT IS <span class="h1Span">POPULAR</span></h1>
+    <app-series-shape [renderedSeries]="popularSeries()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>ACTION & ADVENTURE</h2>
+
+    <app-series-shape [renderedSeries]="actionSeries()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>ANIMATION</h2>
+    <app-series-shape [renderedSeries]="animationSeries()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>COMEDY</h2>
+    <app-series-shape [renderedSeries]="comedySeries()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>DRAMA</h2>
+    <app-series-shape [renderedSeries]="dramaSeries()" />
+  </div>
+
+  <div class="movieContainer">
+    <h2>CRIME</h2>
+    <app-series-shape [renderedSeries]="horrorSeries()" />
+  </div>
+  <div class="movieContainer">
+    <h2>MYSTERY</h2>
+    <app-series-shape [renderedSeries]="mysterySeries()" />
+  </div>
+</div>
