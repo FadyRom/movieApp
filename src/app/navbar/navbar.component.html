@@ -33,8 +33,17 @@
 <div class="phoneNav">
   <nav class="phoneNav">
     <div class="searchDiv">
-      <mat-icon class="matIcon">search</mat-icon>
-      <input type="text" name="search" id="search" placeholder="Search" />
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Search"
+        [(ngModel)]="searchFieldValue"
+        (keyup.enter)="bind()"
+      />
+      <button type="submit" class="submitSearch" (click)="bind()">
+        <mat-icon class="matIcon">search</mat-icon>
+      </button>
     </div>
 
     <div>

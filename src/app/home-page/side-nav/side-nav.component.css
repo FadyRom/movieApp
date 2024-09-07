@@ -102,6 +102,11 @@ hr {
   cursor: pointer;
 }
 
+.submitSearch {
+  background-color: transparent;
+  border: none;
+}
+
 .matIcon {
   color: white;
   cursor: pointer;
